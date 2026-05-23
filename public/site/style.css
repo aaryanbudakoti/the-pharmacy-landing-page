@@ -336,12 +336,93 @@ p{margin:0 0 1em;color:var(--ink-2)}
   .nav-links a{padding:.9rem 1rem;border-radius:10px}
   .nav-links a.nav-cta{margin:.4rem 0 0;text-align:center}
   .footer-grid{grid-template-columns:1fr}
-  .contact-list li{grid-template-columns:1fr}
+  .contact-list li{grid-template-columns:1fr;gap:.3rem;align-items:flex-start}
   .counters{gap:1.2rem}
   .counter .num,.counter .num-suffix{font-size:1.6rem}
   .float-wa{width:56px;height:56px;bottom:18px;right:18px}
   .float-wa::after{display:none}
 }
+
+/* ====== SMALL MOBILE (≤ 480px) ====== */
+@media (max-width: 480px){
+  .container,.container.narrow{width:min(100%,100% - 32px)}
+  .section{padding:48px 0}
+  h1{font-size:clamp(1.7rem,8vw,2.2rem);letter-spacing:-.015em}
+  h2{font-size:clamp(1.35rem,6vw,1.7rem)}
+  .lead{font-size:1rem}
+
+  /* Navbar */
+  .nav-inner{padding:.75rem 0}
+  .logo{font-size:.98rem}
+  .logo-mark{width:30px;height:30px;border-radius:9px}
+
+  /* Hero */
+  .hero{padding:36px 0 56px}
+  .hero-inner{gap:1.6rem}
+  .eyebrow{font-size:.74rem;padding:.4rem .7rem;margin-bottom:.9rem}
+  .hero-copy h1{margin-bottom:.7rem}
+  .hero-ctas{flex-direction:column;align-items:stretch;gap:.6rem;margin:1.3rem 0}
+  .hero-ctas .btn{justify-content:center;width:100%;padding:.95rem 1rem}
+  .trust-badges{gap:.55rem;margin-top:1.2rem}
+  .trust-badges li{flex:1 1 calc(50% - .3rem);padding:.6rem .75rem;gap:.5rem;min-width:0}
+  .trust-badges strong{font-size:.98rem}
+  .trust-badges span{font-size:.78rem;line-height:1.2}
+
+  /* Hero glass card */
+  .hero-card{max-width:100%}
+  .hero-card .card-glass{padding:1.1rem;border-radius:var(--r-lg);gap:.6rem}
+  .card-row{padding:.5rem;gap:.7rem}
+  .icon-circle{width:38px;height:38px;border-radius:11px}
+  .card-row .bold{font-size:.95rem;line-height:1.3}
+
+  /* About visual stack — collapse from absolute to flow */
+  .about-visual,.visual-stack{min-height:0;height:auto}
+  .visual-stack{display:flex;flex-direction:column;gap:.9rem}
+  .v-card{position:static;width:100%;padding:1.15rem}
+  .v-1 .rx{font-size:2.2rem}
+
+  /* Cards */
+  .grid-cards{grid-template-columns:1fr;gap:.9rem}
+  .s-card,.why-item,.t-card{padding:1.3rem;border-radius:var(--r-md)}
+  .s-icon{width:46px;height:46px;font-size:1.5rem;margin-bottom:.7rem}
+  .why-grid{gap:.9rem}
+
+  /* Delivery */
+  .steps li{padding:.85rem 1rem;gap:.75rem}
+  .steps li span{width:30px;height:30px;font-size:.9rem}
+  .phone-mock{width:100%;max-width:280px;height:480px;border-radius:34px;padding:14px}
+  .phone-top{width:78px;height:18px}
+
+  /* Map */
+  .map-wrap{height:320px;border-radius:var(--r-md)}
+
+  /* FAQ */
+  .faq{padding:0 1rem;border-radius:var(--r-sm)}
+  .faq summary{padding:.95rem 0;font-size:.95rem;gap:.6rem}
+
+  /* Contact */
+  .contact-form{padding:1.4rem;border-radius:var(--r-md)}
+  .contact-list li{padding:.85rem 1rem}
+  .contact-list strong{font-size:.85rem}
+
+  /* Footer */
+  .footer{padding-top:2.8rem}
+  .footer-grid{gap:1.8rem}
+  .footer-bottom{margin-top:2rem;font-size:.78rem}
+
+  /* Floating WA — sit above bottom safe area */
+  .float-wa{width:52px;height:52px;bottom:16px;right:16px}
+}
+
+/* ====== TINY MOBILE (≤ 360px) ====== */
+@media (max-width: 360px){
+  h1{font-size:1.55rem}
+  .trust-badges li{flex:1 1 100%}
+  .hero-card .card-glass{padding:.95rem}
+  .phone-mock{height:440px}
+  .map-wrap{height:280px}
+}
+
 
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
