@@ -336,7 +336,8 @@ p{margin:0 0 1em;color:var(--ink-2)}
   .contact-list li{grid-template-columns:1fr}
   .counters{gap:1.2rem}
   .counter .num,.counter .num-suffix{font-size:1.6rem}
-  .float-wa{width:54px;height:54px;bottom:18px;right:18px}
+  .float-wa{width:56px;height:56px;bottom:18px;right:18px}
+  .float-wa::after{display:none}
 }
 
 @media (prefers-reduced-motion: reduce){
