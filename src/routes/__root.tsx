@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "The Pharmacy, Rajinder Nagar" },
+      { name: "description", content: "A modern, trustworthy pharmacy landing page for \"The Pharmacy\" in Old Rajinder Nagar, Delhi." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "The Pharmacy, Rajinder Nagar" },
+      { property: "og:description", content: "A modern, trustworthy pharmacy landing page for \"The Pharmacy\" in Old Rajinder Nagar, Delhi." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "The Pharmacy, Rajinder Nagar" },
+      { name: "twitter:description", content: "A modern, trustworthy pharmacy landing page for \"The Pharmacy\" in Old Rajinder Nagar, Delhi." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6b1ad64b-dfa5-44e0-9a37-b095dcfb4b77/id-preview-2fe26e61--72382f86-6cba-4b72-85df-dc00cc07b61d.lovable.app-1778435757187.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6b1ad64b-dfa5-44e0-9a37-b095dcfb4b77/id-preview-2fe26e61--72382f86-6cba-4b72-85df-dc00cc07b61d.lovable.app-1778435757187.png" },
     ],
     links: [
       {
