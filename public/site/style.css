@@ -274,15 +274,39 @@ p{margin:0 0 1em;color:var(--ink-2)}
 /* ====== FLOATING WHATSAPP ====== */
 .float-wa{
   position:fixed;bottom:24px;right:24px;z-index:60;
-  width:60px;height:60px;border-radius:50%;
-  background:#25D366;color:#fff;
+  width:62px;height:62px;border-radius:50%;
+  background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);
+  color:#fff;
   display:inline-flex;align-items:center;justify-content:center;
-  box-shadow:0 14px 30px rgba(37,211,102,.45);
-  animation:floaty 3s ease-in-out infinite;
-  transition:transform .25s var(--t);
+  box-shadow:0 14px 34px rgba(37,211,102,.45), 0 4px 12px rgba(18,140,126,.35);
+  animation:floaty 3.2s ease-in-out infinite;
+  transition:transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s var(--t);
+  isolation:isolate;
 }
-.float-wa:hover{transform:scale(1.08)}
+.float-wa::before{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  background:#25D366;z-index:-1;
+  animation:waPulse 2.2s ease-out infinite;
+}
+.float-wa::after{
+  content:"Chat with us";
+  position:absolute;right:74px;top:50%;transform:translateY(-50%) translateX(8px);
+  background:#0b3b2e;color:#fff;font-size:.82rem;font-weight:600;
+  padding:.55rem .85rem;border-radius:10px;white-space:nowrap;
+  opacity:0;pointer-events:none;
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+  transition:opacity .25s var(--t), transform .25s var(--t);
+}
+.float-wa:hover{transform:scale(1.12) rotate(-6deg);box-shadow:0 18px 40px rgba(37,211,102,.55)}
+.float-wa:hover::after{opacity:1;transform:translateY(-50%) translateX(0)}
+.float-wa:active{transform:scale(1.02)}
+.float-wa svg{transition:transform .35s var(--t)}
+.float-wa:hover svg{transform:scale(1.08)}
 @keyframes floaty{50%{transform:translateY(-6px)}}
+@keyframes waPulse{
+  0%{transform:scale(1);opacity:.55}
+  80%,100%{transform:scale(1.7);opacity:0}
+}
 
 /* ====== REVEAL ANIMATIONS ====== */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--t), transform .8s var(--t)}
@@ -312,7 +336,8 @@ p{margin:0 0 1em;color:var(--ink-2)}
   .contact-list li{grid-template-columns:1fr}
   .counters{gap:1.2rem}
   .counter .num,.counter .num-suffix{font-size:1.6rem}
-  .float-wa{width:54px;height:54px;bottom:18px;right:18px}
+  .float-wa{width:56px;height:56px;bottom:18px;right:18px}
+  .float-wa::after{display:none}
 }
 
 @media (prefers-reduced-motion: reduce){
