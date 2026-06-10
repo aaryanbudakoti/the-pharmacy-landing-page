@@ -3,6 +3,8 @@ The Pharmacy — Landing Page
 A modern, responsive, SEO-optimized landing page for The Pharmacy, a trusted chemist and medicine delivery store located in Old Rajinder Nagar, Delhi, opposite Sir Ganga Ram Hospital.
 
 Built using pure HTML, CSS, and JavaScript with a premium healthcare-inspired UI focused on local SEO, trust-building, and customer conversion.
+<br>
+<img width="1037" height="575" alt="pharmacy" src="https://github.com/user-attachments/assets/ffede09c-d5a7-4cfa-90e9-5e8059dbc1c4" />
 
 📌 Project Overview
 
